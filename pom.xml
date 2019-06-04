@@ -105,10 +105,27 @@
                         <configuration>
                             <!--最小化打包-->
                             <!--    <minimizeJar>true</minimizeJar>-->
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>eu.somatik.serviceloader-maven-plugin</groupId>
+                <artifactId>serviceloader-maven-plugin</artifactId>
+                <version>1.0.2</version>
+                <configuration>
+                    <services>
+                        <param>net.opentsdb.tsd.RTPublisher</param>
+                    </services>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             </plugins>
         </build>
     </project>
