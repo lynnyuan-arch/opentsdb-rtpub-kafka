@@ -35,12 +35,12 @@ Especially when the kafka brokers enabled security feature, the configuration it
     * The key of datapoint and annotation is the tsuid.
     * The value of datapoint and annotation is converted to json string, then convert to byte array.
 * Configuration items of producer flush
-``tsd.rtpublisher.kafka.flush.number = 500`` The records number of a batch.
-``tsd.rtpublisher.kafka.flush.ms = 200``  The time interval of a batch, unit is "millseconds".
-When one of these two condition happen, the producer will flush the batch.
+    * ``tsd.rtpublisher.kafka.flush.number = 500`` The records number of a batch.
+    * ``tsd.rtpublisher.kafka.flush.ms = 200``  The time interval of a batch, unit is "millseconds".
+    * When one of these two condition happen, the producer will flush the batch.
 
 * Other Configuration items
-``tsd.rtpublisher.kafka.linger.ms = 100`` The default value of this item is ``100`` 
-``tsd.rtpublisher.kafka.buffer.memory = 33554432`` The default value of this item is ``33554432`` 
+    * ``tsd.rtpublisher.kafka.linger.ms = 100`` The default value of this item is ``100`` 
+    * ``tsd.rtpublisher.kafka.buffer.memory = 33554432`` The default value of this item is ``33554432`` 
 
 TODO - doc em
