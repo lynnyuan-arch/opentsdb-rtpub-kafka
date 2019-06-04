@@ -228,7 +228,7 @@ public class KafkaRTPublisher extends RTPublisher {
         });
         if(records.incrementAndGet() >= flushNumber
             || System.currentTimeMillis() - lastTimestamp.get() >= flushMs){
-            LOG.debug("flush {} to kafka borker.", records.get());
+            LOG.debug("flush {} to kafka broker.", records.get());
             producer.flush();
             records.set(0);
             lastTimestamp.set(System.currentTimeMillis());
