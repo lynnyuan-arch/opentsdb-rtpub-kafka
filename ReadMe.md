@@ -6,7 +6,7 @@
            |_|    The modern time series database.
 
  
-RTPublisher plugin for OpenTSDB
+RTPublisher Kafka plugin for OpenTSDB
 
 ##Installation
 * Compile the plugin via ``mvn package -Pdist``.
@@ -24,7 +24,7 @@ RTPublisher plugin for OpenTSDB
     * Add ``tsd.rtpublisher.kafka.annotation.topic = <topic-name>`` The kafka topic of annotation.
 
 * If you want to override other configuration items of kafka producer, Add the the following configs to your ``opentsdb.conf`` file.
-Especially when the kafka brokers enabled security, the configuration items related with security must be overriden.
+Especially when the kafka brokers enabled security feature, the configuration items related with security must be overriden.
     * Add ``tsd.rtpublisher.kafka.acks = all`` The default value of this item is ``all`` 
     * Add ``tsd.rtpublisher.kafka.batch.size = 16384`` The default value of this item is ``16384`` .
     
